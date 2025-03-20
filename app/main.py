@@ -12,7 +12,7 @@ class Animal:
     def feed(self) -> int:
         if self.is_hungry is True:
             print(f"Eating {self.appetite} food points...")
-            self.is_hungry = not self.is_hungry
+            self.is_hungry = False
             return self.appetite
         return 0
 
@@ -32,7 +32,6 @@ class Dog(Animal):
 
     def __init__(self, name: str, is_hungry: bool = True) -> None:
         super().__init__(name, appetite=7)
-        self.is_hungry = is_hungry
 
     @staticmethod
     def bring_slippers() -> None:
